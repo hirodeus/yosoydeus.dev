@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- 3D Cube Favicon -->
+  <defs>
+    <linearGradient id="cubeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Back face -->
+  <polygon points="16,16 48,16 40,24 8,24" fill="url(#cubeGradient)" opacity="0.7" />
+  <!-- Top face -->
+  <polygon points="8,24 40,24 32,32 0,32" fill="url(#cubeGradient)" opacity="0.9" />
+  <!-- Side face -->
+  <polygon points="48,16 48,48 40,40 40,24" fill="url(#cubeGradient)" opacity="0.8" />
+  
+  <!-- Optional: Add a subtle highlight -->
+  <polygon points="16,16 48,16 40,24 8,24" fill="white" fill-opacity="0.1" />
+  
+  <!-- Optional: Add a subtle shadow -->
+  <polygon points="8,24 40,24 32,32 0,32" fill="black" fill-opacity="0.1" />
+</svg>

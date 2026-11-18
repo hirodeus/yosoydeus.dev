@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta name="facebook-domain-verification" content="ex4ccvokfpabk1lcab5u5mw8d4f1bt" />
+  <meta charset="UTF-8" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0891b2" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description"
+    content="Héctor Carrillo G. — XR Developer & Technical Artist. Interactive experiences, real‑time visuals and web projects. Explore projects, skills and experience." />
+  <meta name="keywords"
+    content="XR Developer, Technical Artist, Unreal Engine 5, AI, Web3, Portfolio, Interactive, Visualizer" />
+  <link rel="canonical" href="https://yosoydeus.dev/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Héctor Carrillo G." />
+  <meta property="og:title" content="Héctor Carrillo G. | XR Developer & Technical Artist" />
+  <meta property="og:description"
+    content="Interactive experiences, real‑time visuals and web projects. Explore projects, skills and experience." />
+  <meta property="og:url" content="https://yosoydeus.dev/" />
+  <meta property="og:image" content="https://yosoydeus.dev/assets/images/visual2.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="XR experiences and real‑time visuals by Héctor Carrillo G." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Héctor Carrillo G. | XR Developer & Technical Artist" />
+  <meta name="twitter:description"
+    content="Interactive experiences, real‑time visuals and web projects. Explore projects, skills and experience." />
+  <meta name="twitter:image" content="https://yosoydeus.dev/assets/images/visual2.png" />
+  <title>Héctor Carrillo G. | XR Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&family=Inter:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    .font-tech {
+      font-family: 'Share Tech Mono', monospace;
+    }
+
+    .font-orbitron {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .deus-hero {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem 3rem;
+      overflow: hidden;
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 60%),
+        radial-gradient(circle at bottom, rgba(56, 189, 248, 0.08), transparent 65%),
+        #020617;
+      color: #e2e8f0;
+    }
+
+    .deus-hero-inner {
+      position: relative;
+      max-width: 1100px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 3rem;
+      z-index: 1;
+    }
+
+    .deus-hero-copy-eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      margin-bottom: 0.75rem;
+    }
+
+    .deus-hero-title {
+      font-family: 'Orbitron', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: clamp(2rem, 3vw + 1rem, 2.9rem);
+      line-height: 1.1;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #f9fafb;
+      margin-bottom: 1.25rem;
+    }
+
+    .deus-hero-subtitle {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: #9ca3af;
+      max-width: 34rem;
+    }
+
+    .deus-hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #6b7280;
+    }
+
+    .deus-hero-meta-pill {
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.65));
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.9), 0 0 25px rgba(8, 145, 178, 0.25);
+    }
+
+    .deus-hero-orbit {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .deus-hero-orbit-core {
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at center, rgba(56, 189, 248, 0.75), transparent 55%),
+        radial-gradient(circle at top, rgba(8, 47, 73, 0.7), transparent 60%);
+      filter: blur(1px);
+      opacity: 0.9;
+      animation: deus-orbit-pulse 9s ease-in-out infinite;
+    }
+
+    .deus-hero-orbit-ring {
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      box-shadow:
+        0 0 40px rgba(15, 23, 42, 0.9),
+        0 0 80px rgba(56, 189, 248, 0.24);
+      mask-image: radial-gradient(circle, #000 40%, transparent 75%);
+    }
+
+    .deus-hero-orbit-noise {
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      border-radius: 999px;
+      background-image: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.8) 0, transparent 55%),
+        radial-gradient(circle at 75% 30%, rgba(94, 234, 212, 0.8) 0, transparent 50%),
+        radial-gradient(circle at 50% 80%, rgba(59, 130, 246, 0.75) 0, transparent 60%);
+      opacity: 0.3;
+      mix-blend-mode: screen;
+      filter: blur(12px);
+      animation: deus-orbit-noise 16s ease-in-out infinite alternate;
+    }
+
+    .deus-cards {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .deus-card {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      width: 100%;
+      padding: 1rem 1.3rem;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8));
+      backdrop-filter: blur(16px);
+      color: #e5e7eb;
+      cursor: pointer;
+      overflow: hidden;
+      isolation: isolate;
+      transition:
+        transform 0.24s ease-out,
+        box-shadow 0.24s ease-out,
+        border-color 0.24s ease-out,
+        background 0.24s ease-out,
+        opacity 0.35s ease-out;
+      box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.9),
+        0 0 0 1px rgba(15, 23, 42, 0.9);
+      opacity: 0;
+      transform: translateY(16px) scale(0.96);
+    }
+
+    .deus-card-sequence-1 {
+      animation: deus-card-enter 0.7s cubic-bezier(0.23, 0.95, 0.25, 1.02) 0.2s forwards,
+        deus-card-idle 9s ease-in-out 1.5s infinite;
+    }
+
+    .deus-card-sequence-2 {
+      animation: deus-card-enter 0.7s cubic-bezier(0.23, 0.95, 0.25, 1.02) 0.4s forwards,
+        deus-card-idle 9s ease-in-out 2.4s infinite;
+    }
+
+    .deus-card-sequence-3 {
+      animation: deus-card-enter 0.7s cubic-bezier(0.23, 0.95, 0.25, 1.02) 0.6s forwards,
+        deus-card-idle 9s ease-in-out 3.3s infinite;
+    }
+
+    .deus-card:hover {
+      transform: translateY(-4px) scale(1.01);
+      border-color: rgba(56, 189, 248, 0.85);
+      box-shadow:
+        0 26px 70px rgba(15, 23, 42, 0.9),
+        0 0 40px rgba(56, 189, 248, 0.45);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.16), rgba(15, 23, 42, 0.96));
+    }
+
+    .deus-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.16), transparent 60%),
+        radial-gradient(circle at 100% 0, rgba(94, 234, 212, 0.14), transparent 60%);
+      opacity: 0;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 0.3s ease-out;
+      z-index: -1;
+    }
+
+    .deus-card:hover::before {
+      opacity: 1;
+    }
+
+    .deus-card-main {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+
+    .deus-card-label {
+      font-family: 'Orbitron', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .deus-card-label span {
+      opacity: 0.46;
+    }
+
+    .deus-card-title {
+      font-family: 'Share Tech Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.82rem;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: #f9fafb;
+      white-space: nowrap;
+    }
+
+    .deus-card-caption {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.78rem;
+      color: #9ca3af;
+    }
+
+    .deus-card-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.22), rgba(15, 23, 42, 0.96));
+      color: #e5e7eb;
+      font-size: 0.9rem;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 1),
+        0 0 20px rgba(56, 189, 248, 0.55);
+      animation: deus-arrow-pulse 2.4s ease-in-out infinite;
+    }
+
+    .deus-card:hover .deus-card-arrow {
+      animation-duration: 1.4s;
+      transform: translateY(-1px);
+    }
+
+    .deus-card-arrow-icon {
+      display: block;
+      transform: translateY(1px);
+    }
+
+    @keyframes deus-orbit-pulse {
+      0% {
+        transform: scale(0.96) translateY(4px);
+        opacity: 0.85;
+      }
+
+      40% {
+        transform: scale(1.02) translateY(-2px);
+        opacity: 1;
+      }
+
+      70% {
+        transform: scale(1.04) translateY(2px);
+        opacity: 0.9;
+      }
+
+      100% {
+        transform: scale(0.98) translateY(0);
+        opacity: 0.88;
+      }
+    }
+
+    @keyframes deus-orbit-noise {
+      0% {
+        transform: translate3d(-12px, 6px, 0) rotate(-4deg);
+        opacity: 0.28;
+      }
+
+      30% {
+        transform: translate3d(10px, -4px, 0) rotate(2deg);
+        opacity: 0.36;
+      }
+
+      65% {
+        transform: translate3d(-6px, 10px, 0) rotate(-1deg);
+        opacity: 0.32;
+      }
+
+      100% {
+        transform: translate3d(6px, -6px, 0) rotate(3deg);
+        opacity: 0.38;
+      }
+    }
+
+    @keyframes deus-card-enter {
+      0% {
+        opacity: 0;
+        transform: translateY(18px) scale(0.94);
+      }
+
+      60% {
+        opacity: 1;
+        transform: translateY(-4px) scale(1.02);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes deus-card-idle {
+      0%,
+      30% {
+        transform: translateY(0) scale(1);
+        box-shadow:
+          0 18px 42px rgba(15, 23, 42, 0.92),
+          0 0 0 1px rgba(15, 23, 42, 1);
+      }
+
+      32% {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow:
+          0 22px 60px rgba(15, 23, 42, 0.96),
+          0 0 35px rgba(56, 189, 248, 0.6);
+      }
+
+      40% {
+        transform: translateY(-2px) scale(1.01);
+      }
+
+      48% {
+        transform: translateY(-4px) scale(1.016);
+      }
+
+      60%,
+      100% {
+        transform: translateY(0) scale(1);
+        box-shadow:
+          0 18px 42px rgba(15, 23, 42, 0.92),
+          0 0 0 1px rgba(15, 23, 42, 1);
+      }
+    }
+
+    @keyframes deus-arrow-pulse {
+      0%,
+      60% {
+        transform: translateY(0);
+        box-shadow:
+          0 0 0 1px rgba(15, 23, 42, 1),
+          0 0 16px rgba(56, 189, 248, 0.55);
+      }
+
+      20% {
+        transform: translateY(2px);
+      }
+
+      30% {
+        transform: translateY(-1px);
+      }
+
+      40% {
+        transform: translateY(1px);
+        box-shadow:
+          0 0 0 1px rgba(15, 23, 42, 1),
+          0 0 32px rgba(56, 189, 248, 0.9);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .deus-hero {
+        padding-top: 4.5rem;
+        padding-bottom: 3.5rem;
+      }
+
+      .deus-hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.25rem;
+        text-align: center;
+      }
+
+      .deus-hero-copy-eyebrow {
+        justify-self: center;
+      }
+
+      .deus-hero-title {
+        font-size: clamp(1.8rem, 4vw + 1rem, 2.4rem);
+      }
+
+      .deus-hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .deus-hero-meta {
+        justify-content: center;
+      }
+
+      .deus-cards {
+        margin: 0 auto;
+      }
+
+      .deus-hero-orbit-core {
+        width: 220px;
+        height: 220px;
+      }
+
+      .deus-hero-orbit-ring,
+      .deus-hero-orbit-noise {
+        width: 320px;
+        height: 320px;
+      }
+    }
+
+    .deus-modules-header {
+      max-width: 46rem;
+      margin: 3.5rem auto 1.5rem;
+      text-align: center;
+    }
+
+    .deus-modules-eyebrow {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      margin-bottom: 0.6rem;
+    }
+
+    .deus-modules-title {
+      font-family: 'Orbitron', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: clamp(1.2rem, 1.6vw + 0.9rem, 1.6rem);
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: #f9fafb;
+      margin-bottom: 0.6rem;
+    }
+
+    .deus-modules-body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #9ca3af;
+    }
+
+    .deus-modules-host {
+      margin-top: 3.5rem;
+      margin-bottom: 3.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    /* ===== Tarjeta base de proyecto (.deus-ui-*): texto + galería con miniaturas ===== */
+    .deus-ui {
+      position: relative;
+      padding: 4rem 1.5rem 3rem;
+      background: transparent;
+      color: #e5e7eb;
+    }
+
+    .deus-ui-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+      gap: 2.75rem;
+      align-items: center;
+    }
+
+    .deus-ui-eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      margin-bottom: 0.9rem;
+    }
+
+    .deus-ui-title {
+      font-family: 'Orbitron', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: clamp(1.6rem, 2.4vw + 1rem, 2.2rem);
+      line-height: 1.1;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #f9fafb;
+      margin-bottom: 1.25rem;
+    }
+
+    .deus-ui-body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #9ca3af;
+      max-width: 34rem;
+    }
+
+    .deus-ui-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #9ca3af;
+    }
+
+    .deus-ui-tag {
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8));
+      backdrop-filter: blur(14px);
+    }
+
+    .deus-ui-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+      margin-top: 1.9rem;
+    }
+
+    .deus-ui-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.9);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.24), rgba(15, 23, 42, 0.98));
+      color: #ecfeff;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.9rem;
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 1), 0 0 32px rgba(56, 189, 248, 0.8);
+      transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, background 0.18s ease-out;
+    }
+
+    .deus-ui-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 55px rgba(15, 23, 42, 0.96), 0 0 36px rgba(56, 189, 248, 0.9);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.3), rgba(15, 23, 42, 0.98));
+    }
+
+    .deus-ui-link:active { transform: translateY(1px) scale(0.98); }
+
+    .deus-ui-link-arrow { margin-left: 0.5rem; font-size: 1rem; transform: translateY(1px); }
+
+    .deus-ui-note { font-size: 0.8rem; color: #6b7280; }
+
+    .deus-ui-gallery {
+      position: relative;
+      padding: 0.9rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.86));
+      backdrop-filter: blur(18px);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.9), 0 0 0 1px rgba(15, 23, 42, 0.9);
+    }
+
+    .deus-ui-gallery-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.1rem 0.15rem 0.7rem;
+      font-family: 'Share Tech Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .deus-ui-caption { color: #9ca3af; letter-spacing: 0.08em; text-align: right; }
+
+    .deus-ui-stage {
+      border-radius: 0.65rem;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      background: #020617;
+      aspect-ratio: 8 / 5;
+    }
+
+    .deus-ui-stage img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.25s ease-out;
+    }
+
+    .deus-ui-stage img.is-swapping { opacity: 0; }
+
+    .deus-ui-thumbs {
+      display: grid;
+      grid-template-columns: repeat(var(--n, 5), minmax(0, 1fr));
+      gap: 0.6rem;
+      margin-top: 0.7rem;
+    }
+
+    .deus-ui-thumb {
+      padding: 0;
+      border-radius: 0.55rem;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: #020617;
+      cursor: pointer;
+      opacity: 0.6;
+      aspect-ratio: 8 / 5;
+      transition: opacity 0.18s ease-out, border-color 0.18s ease-out, box-shadow 0.18s ease-out, transform 0.18s ease-out;
+    }
+
+    .deus-ui-thumb:hover { opacity: 1; transform: translateY(-2px); }
+
+    .deus-ui-thumb:focus-visible { outline: 2px solid #38bdf8; outline-offset: 2px; }
+
+    .deus-ui-thumb.is-on {
+      opacity: 1;
+      border-color: rgba(56, 189, 248, 0.9);
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 1), 0 0 22px rgba(56, 189, 248, 0.55);
+    }
+
+    .deus-ui-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+    @media (max-width: 900px) {
+      .deus-ui { padding: 3rem 1.25rem 2rem; }
+      .deus-ui-inner { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+    }
+
+    @media (max-width: 520px) {
+      .deus-ui-thumbs { gap: 0.4rem; }
+      .deus-ui-gallery-head { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+      .deus-ui-caption { text-align: left; }
+      .deus-ui-link { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .deus-ui-stage img, .deus-ui-thumb, .deus-ui-link { transition: none; }
+    }
+
+    /* ===== Selected work: tarjetas de proyecto (hereda .deus-ui-*) ===== */
+    .deus-work { position: relative; padding: 3.5rem 0 1rem; }
+
+    .deus-work-head { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+    .deus-work-head .deus-modules-eyebrow { text-align: left; }
+
+    .deus-work-title {
+      font-family: 'Orbitron', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: clamp(1.5rem, 2.4vw + 1rem, 2.4rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #f9fafb;
+      margin-bottom: 0.7rem;
+    }
+
+    .deus-work-lead {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #9ca3af;
+      max-width: 38rem;
+    }
+
+    .deus-work .deus-ui {
+      --ac: 195;
+      padding: 2.6rem 1.5rem;
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .deus-work .deus-ui.is-in { opacity: 1; transform: none; }
+
+    .deus-ui.is-flip .deus-ui-inner { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+    .deus-ui.is-flip .deus-ui-copy { order: 2; }
+
+    /* cada tarjeta se tiñe con su propio color (--ac = matiz HSL) */
+    .deus-work .deus-ui-eyebrow { color: hsl(var(--ac) 92% 64%); display: flex; align-items: baseline; gap: 0.9rem; }
+    .deus-ui-idx { color: #f9fafb; letter-spacing: 0.2em; }
+    .deus-ui-idx i { color: #64748b; font-style: normal; }
+
+    .deus-ui-lead {
+      margin-top: 0.95rem;
+      padding-left: 0.85rem;
+      border-left: 2px solid hsl(var(--ac) 90% 60% / 0.55);
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #94a3b8;
+      max-width: 34rem;
+    }
+
+    .deus-work .deus-ui-title { font-size: clamp(1.35rem, 2vw + 0.9rem, 2rem); }
+
+    .deus-work .deus-ui-link {
+      border-color: hsl(var(--ac) 95% 62% / 0.9);
+      background: radial-gradient(circle at top, hsl(var(--ac) 95% 60% / 0.24), rgba(15, 23, 42, 0.98));
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 1), 0 0 30px hsl(var(--ac) 95% 60% / 0.55);
+      cursor: pointer;
+    }
+
+    .deus-work .deus-ui-link:hover {
+      box-shadow: 0 22px 55px rgba(15, 23, 42, 0.96), 0 0 38px hsl(var(--ac) 95% 60% / 0.85);
+    }
+
+    .deus-work .deus-ui-thumb.is-on {
+      border-color: hsl(var(--ac) 95% 62% / 0.95);
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 1), 0 0 22px hsl(var(--ac) 95% 60% / 0.55);
+    }
+
+    .deus-work .deus-ui-thumb:focus-visible { outline-color: hsl(var(--ac) 95% 62%); }
+
+    .deus-work .deus-ui-gallery {
+      transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease-out;
+      will-change: transform;
+    }
+
+    .deus-work .deus-ui-gallery:hover {
+      border-color: hsl(var(--ac) 90% 62% / 0.6);
+      box-shadow: 0 24px 55px rgba(2, 6, 23, 0.95), 0 0 40px hsl(var(--ac) 95% 60% / 0.22);
+    }
+
+    /* panel translúcido detrás del texto: el hélix pasa por detrás sin estorbar la lectura */
+    .deus-work .deus-ui-copy,
+    .deus-work-head {
+      position: relative;
+      padding: 1.7rem 1.8rem;
+      border-radius: 1rem;
+      border: 1px solid hsl(var(--ac, 195) 40% 70% / 0.14);
+      background: linear-gradient(145deg, rgba(2, 6, 23, 0.74), rgba(15, 23, 42, 0.56));
+      -webkit-backdrop-filter: blur(12px) saturate(1.1);
+      backdrop-filter: blur(12px) saturate(1.1);
+      box-shadow: 0 18px 44px rgba(2, 6, 23, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .deus-work-head { max-width: 1052px; margin-bottom: 0.5rem; }
+
+    /* tarjetas compactas (AR y asistente), lado a lado */
+    .deus-mini-row {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 1rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2.5rem;
+    }
+
+    .deus-mini-row .deus-ui { padding: 1.4rem 0; }
+    .deus-mini .deus-ui-inner { grid-template-columns: minmax(0, 1fr); gap: 1.4rem; max-width: none; }
+    .deus-mini .deus-ui-gallery { order: -1; }
+    .deus-mini .deus-ui-title { font-size: clamp(1.15rem, 1.2vw + 0.9rem, 1.45rem); }
+    .deus-mini .deus-ui-body { font-size: 0.9rem; }
+
+    .deus-ui-stage model-viewer { display: block; }
+
+    .deus-ai-stage {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: hsl(var(--ac) 92% 66%);
+      background: radial-gradient(circle at 50% 55%, hsl(var(--ac) 90% 50% / 0.22), transparent 62%), #020617;
+    }
+
+    .deus-ai-stage svg { position: relative; z-index: 1; filter: drop-shadow(0 0 14px hsl(var(--ac) 95% 60% / 0.65)); animation: deus-ai-bob 5s ease-in-out infinite; }
+
+    .deus-ai-ring {
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      border: 1px solid hsl(var(--ac) 90% 62% / 0.45);
+      animation: deus-ai-ring 3.6s ease-out infinite;
+    }
+
+    .deus-ai-ring.r2 { animation-delay: 1.8s; }
+
+    @keyframes deus-ai-bob { 0%, 100% { transform: translateY(-5px); } 50% { transform: translateY(6px); } }
+    @keyframes deus-ai-ring { 0% { transform: scale(0.7); opacity: 0.8; } 100% { transform: scale(1.7); opacity: 0; } }
+
+    /* Lo que ahora vive en «Selected work» ya no se repite en el hub ni en el panel de proyectos */
+    #experience-hub .py-12 > .text-center.mb-12,
+    #experience-hub .py-12 > p.max-w-2xl,
+    #experience-hub .py-12 > .grid:has(> a[href*="musica.yosoydeus.com"]) { display: none; }
+
+    #main-sections > .grid > div:first-child { display: none; }
+
+    /* fondo: el canvas del bundle ya no dibuja (ver script del head); solo conserva el color base */
+    #root > canvas.fixed { width: 100% !important; height: 100% !important; }
+
+    @media (max-width: 900px) {
+      .deus-work { padding-top: 2.5rem; }
+      .deus-work .deus-ui { padding: 1.9rem 1.25rem; }
+      .deus-ui.is-flip .deus-ui-inner { grid-template-columns: minmax(0, 1fr); }
+      .deus-ui.is-flip .deus-ui-copy { order: 0; }
+      .deus-mini-row { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: 0 1.25rem 1rem; }
+      .deus-work .deus-ui-copy, .deus-work-head { padding: 1.3rem 1.25rem; }
+      .deus-work-head { margin: 0 1.25rem 0.5rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .deus-work .deus-ui { opacity: 1; transform: none; transition: none; }
+      .deus-work .deus-ui-gallery, .deus-ai-stage svg, .deus-ai-ring { transition: none; animation: none; }
+    }
+
+    /* ===== CORE_COMPETENCIES.DLL: árbol de habilidades ===== */
+    .deus-skills { position: relative; padding: 3rem 1.5rem 1rem; max-width: 1148px; margin: 0 auto; }
+
+    .deus-glass {
+      position: relative;
+      border-radius: 1rem;
+      border: 1px solid hsl(var(--bh, 195) 40% 70% / 0.16);
+      background: linear-gradient(145deg, rgba(2, 6, 23, 0.74), rgba(15, 23, 42, 0.56));
+      -webkit-backdrop-filter: blur(12px) saturate(1.1);
+      backdrop-filter: blur(12px) saturate(1.1);
+      box-shadow: 0 18px 44px rgba(2, 6, 23, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .deus-skills-head { padding: 1.7rem 1.8rem; max-width: 760px; margin: 0 auto; text-align: center; }
+    .deus-skills-head .deus-modules-eyebrow { text-align: center; }
+    .deus-skills-head .deus-work-lead { margin: 0 auto; }
+
+    .deus-skills-title {
+      font-family: 'Orbitron', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: clamp(1.4rem, 2.2vw + 0.9rem, 2.2rem);
+      letter-spacing: 0.08em;
+      color: #f9fafb;
+      margin-bottom: 0.7rem;
+      word-break: break-word;
+    }
+
+    /* raíz del árbol: las tres competencias núcleo */
+    .deus-core { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0; margin-top: 1.6rem; }
+
+    .deus-core-link {
+      width: clamp(1.2rem, 5vw, 3.5rem);
+      height: 2px;
+      background: linear-gradient(90deg, rgba(56, 189, 248, 0.15), rgba(56, 189, 248, 0.7), rgba(56, 189, 248, 0.15));
+    }
+
+    .deus-core-node {
+      position: relative;
+      padding: 0.85rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.7);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.26), rgba(2, 6, 23, 0.92));
+      color: #ecfeff;
+      font-family: 'Share Tech Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 0 0 1px rgba(2, 6, 23, 1), 0 0 26px rgba(56, 189, 248, 0.45);
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background 0.2s ease-out;
+    }
+
+    .deus-core-node:hover, .deus-core-node.is-on, .deus-core-node:focus-visible {
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 0 0 1px rgba(2, 6, 23, 1), 0 0 44px rgba(56, 189, 248, 0.9);
+      outline: none;
+    }
+
+    .deus-core-ring {
+      position: absolute;
+      inset: -1px;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.6);
+      animation: deus-core-ring 3.2s ease-out infinite;
+      pointer-events: none;
+    }
+
+    .deus-core-node:nth-of-type(2) .deus-core-ring { animation-delay: 1s; }
+    .deus-core-node:nth-of-type(3) .deus-core-ring { animation-delay: 2s; }
+
+    @keyframes deus-core-ring { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.35, 1.9); opacity: 0; } }
+
+    .deus-skills-hint { margin-top: 0.9rem; text-align: center; font-size: 0.72rem; letter-spacing: 0.14em; color: #64748b; text-transform: uppercase; }
+
+    /* ramas */
+    .deus-tree { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.1rem; margin-top: 2.6rem; }
+
+    /* el tronco que baja de la raíz y el travesaño que reparte a las ramas */
+    .deus-tree::before {
+      content: "";
+      position: absolute;
+      top: -1.7rem;
+      left: 12.5%;
+      right: 12.5%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.55) 12%, rgba(56, 189, 248, 0.55) 88%, transparent);
+    }
+
+    .deus-branch { padding: 1.1rem 1rem 1.2rem; --bh: 195; }
+
+    .deus-branch::before {
+      content: "";
+      position: absolute;
+      top: -1.7rem;
+      left: 50%;
+      width: 1px;
+      height: 1.7rem;
+      background: linear-gradient(180deg, rgba(56, 189, 248, 0.55), hsl(var(--bh) 90% 62% / 0.8));
+    }
+
+    .deus-branch::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: calc(50% - 3.5px);
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: hsl(var(--bh) 95% 66%);
+      box-shadow: 0 0 12px hsl(var(--bh) 95% 60%);
+    }
+
+    .deus-branch header { display: flex; align-items: center; gap: 0.6rem; padding-bottom: 0.8rem; margin-bottom: 0.8rem; border-bottom: 1px solid hsl(var(--bh) 60% 60% / 0.25); }
+
+    .deus-branch-glyph {
+      width: 2rem;
+      height: 2rem;
+      flex: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5rem;
+      color: hsl(var(--bh) 95% 70%);
+      background: hsl(var(--bh) 80% 50% / 0.14);
+      border: 1px solid hsl(var(--bh) 80% 60% / 0.45);
+      font-family: 'Share Tech Mono', ui-monospace, monospace;
+      font-size: 0.8rem;
+    }
+
+    .deus-branch h3 { flex: 1; min-width: 0; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: #f1f5f9; white-space: nowrap; }
+    .deus-branch-idx { color: hsl(var(--bh) 90% 68%); }
+    .deus-branch-count { font-size: 0.7rem; letter-spacing: 0.1em; color: #94a3b8; white-space: nowrap; }
+    .deus-branch-count i { font-style: normal; }
+
+    .deus-branch ul { display: flex; flex-wrap: wrap; gap: 0.45rem; list-style: none; margin: 0; padding: 0; }
+
+    .deus-node {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.38rem 0.7rem 0.38rem 0.6rem;
+      border-radius: 0.45rem;
+      border: 1px solid hsl(var(--bh) 70% 65% / 0.28);
+      background: hsl(var(--bh) 60% 50% / 0.08);
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.78rem;
+      line-height: 1.2;
+      color: #cbd5e1;
+      cursor: default;
+      transition: color 0.2s, border-color 0.2s, background 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.3s;
+    }
+
+    .deus-node::before {
+      content: "";
+      width: 0.4rem;
+      height: 0.4rem;
+      flex: none;
+      transform: rotate(45deg);
+      background: hsl(var(--bh) 80% 60% / 0.6);
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+
+    .deus-node:hover {
+      color: #fff;
+      border-color: hsl(var(--bh) 90% 65% / 0.85);
+      background: hsl(var(--bh) 80% 50% / 0.2);
+      box-shadow: 0 0 16px hsl(var(--bh) 95% 60% / 0.4);
+      transform: translateY(-1px);
+    }
+
+    .deus-node:hover::before { background: hsl(var(--bh) 100% 75%); box-shadow: 0 0 8px hsl(var(--bh) 100% 70%); }
+
+    .deus-node.is-core {
+      color: #fff;
+      font-weight: 600;
+      border-color: hsl(var(--bh) 95% 65% / 0.8);
+      background: hsl(var(--bh) 90% 50% / 0.22);
+      box-shadow: 0 0 14px hsl(var(--bh) 95% 60% / 0.35);
+    }
+
+    .deus-node.is-core::before { background: hsl(var(--bh) 100% 75%); animation: deus-node-pulse 2.4s ease-in-out infinite; }
+
+    @keyframes deus-node-pulse { 0%, 100% { box-shadow: 0 0 0 0 hsl(var(--bh) 100% 70% / 0.7); } 50% { box-shadow: 0 0 0 5px hsl(var(--bh) 100% 70% / 0); } }
+
+    /* al apuntar a un nodo núcleo, lo relacionado se enciende y el resto baja */
+    .deus-skills.is-focus .deus-node:not(.is-lit) { opacity: 0.32; }
+    .deus-node.is-lit {
+      color: #fff;
+      border-color: hsl(var(--bh) 100% 70% / 1);
+      background: hsl(var(--bh) 90% 55% / 0.3);
+      box-shadow: 0 0 20px hsl(var(--bh) 100% 62% / 0.7);
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    /* entrada escalonada */
+    .deus-skills .deus-branch, .deus-skills .deus-core, .deus-skills .deus-skills-head { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }
+    .deus-skills.is-in .deus-branch, .deus-skills.is-in .deus-core, .deus-skills.is-in .deus-skills-head { opacity: 1; transform: none; }
+    .deus-skills.is-in .deus-core { transition-delay: 0.15s; }
+    .deus-skills.is-in .deus-branch:nth-child(1) { transition-delay: 0.25s; }
+    .deus-skills.is-in .deus-branch:nth-child(2) { transition-delay: 0.35s; }
+    .deus-skills.is-in .deus-branch:nth-child(3) { transition-delay: 0.45s; }
+    .deus-skills.is-in .deus-branch:nth-child(4) { transition-delay: 0.55s; }
+
+    @media (max-width: 1020px) {
+      .deus-tree { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .deus-tree::before, .deus-branch::before, .deus-branch::after { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      .deus-skills { padding: 2.4rem 1.25rem 0.5rem; }
+      .deus-skills-head { padding: 1.3rem 1.25rem; }
+      .deus-skills-title { font-size: 4.1vw; letter-spacing: 0.04em; word-break: normal; }
+      .deus-tree { grid-template-columns: minmax(0, 1fr); margin-top: 1.6rem; }
+      .deus-core { gap: 0.5rem; }
+      .deus-core-link { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .deus-skills .deus-branch, .deus-skills .deus-core, .deus-skills .deus-skills-head { opacity: 1; transform: none; transition: none; }
+      .deus-core-ring, .deus-node.is-core::before { animation: none; }
+    }
+
+
+    /* ===== WORK_EXPERIENCE.EXE: línea de tiempo ===== */
+    .deus-exp { position: relative; padding: 3rem 1.5rem 1rem; max-width: 1148px; margin: 0 auto; }
+
+    .deus-x-head { padding: 1.7rem 1.8rem; max-width: 760px; margin: 0 auto; text-align: center; --bh: 205; }
+    .deus-x-head .deus-modules-eyebrow { text-align: center; }
+    .deus-x-head .deus-work-lead { margin: 0 auto; }
+
+    /* tira de carrera */
+    .deus-strip { margin: 1.6rem auto 0; padding: 1.1rem 1.4rem 1.3rem; --bh: 205; }
+    .deus-strip-title { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: #94a3b8; margin-bottom: 0.9rem; }
+
+    .deus-strip-plot {
+      position: relative;
+      height: 11.4rem;
+      padding-top: 0.2rem;
+      background-image: repeating-linear-gradient(90deg, rgba(148, 163, 184, 0.14) 0, rgba(148, 163, 184, 0.14) 1px, transparent 1px, transparent calc(100% / var(--yrs, 7)));
+    }
+
+    .deus-tick { position: absolute; top: 0; bottom: 0; width: 0; }
+    .deus-tick i { position: absolute; bottom: -1.35rem; left: 0; transform: translateX(-50%); font-style: normal; font-size: 0.68rem; color: #64748b; }
+
+    .deus-bar {
+      position: absolute;
+      height: 1.7rem;
+      display: flex;
+      align-items: center;
+      padding: 0 0.55rem;
+      border-radius: 0.4rem;
+      border: 1px solid hsl(var(--ac) 80% 62% / 0.65);
+      background: linear-gradient(90deg, hsl(var(--ac) 80% 52% / 0.42), hsl(var(--ac) 80% 52% / 0.16));
+      color: #f1f5f9;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+    }
+
+    .deus-bar span { pointer-events: none; }
+    .deus-bar:not(.is-short) { overflow: hidden; }
+    .deus-bar.is-short { padding: 0; }
+    .deus-bar.is-short span { position: absolute; right: 100%; margin-right: 0.5rem; }
+    .deus-bar.is-hot, .deus-bar:focus-visible {
+      outline: none;
+      transform: translateY(-1px);
+      background: linear-gradient(90deg, hsl(var(--ac) 90% 58% / 0.7), hsl(var(--ac) 90% 58% / 0.3));
+      box-shadow: 0 0 22px hsl(var(--ac) 95% 60% / 0.65);
+    }
+
+    /* tarjetas */
+    .deus-x-list { position: relative; margin-top: 2.6rem; padding-left: 2.6rem; display: grid; gap: 1.6rem; }
+
+    .deus-x-list::before {
+      content: "";
+      position: absolute;
+      left: 0.55rem;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      width: 2px;
+      background: linear-gradient(180deg, rgba(56, 189, 248, 0.0), rgba(56, 189, 248, 0.7) 8%, rgba(167, 139, 250, 0.7) 92%, rgba(167, 139, 250, 0));
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.5);
+    }
+
+    .deus-x-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: 1.6rem;
+      padding: 1.5rem 1.6rem;
+      transition: border-color 0.25s, box-shadow 0.25s, opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .deus-x-card::before {
+      content: "";
+      position: absolute;
+      left: -2.5rem;
+      top: 1.9rem;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      background: hsl(var(--ac) 95% 62%);
+      box-shadow: 0 0 0 4px rgba(2, 6, 23, 0.9), 0 0 16px hsl(var(--ac) 95% 60%);
+    }
+
+    .deus-x-card::after {
+      content: "";
+      position: absolute;
+      left: -1.7rem;
+      top: 2.3rem;
+      width: 1.7rem;
+      height: 1px;
+      background: linear-gradient(90deg, hsl(var(--ac) 90% 62% / 0.9), transparent);
+    }
+
+    .deus-x-card.is-hot { border-color: hsl(var(--ac) 90% 62% / 0.65); box-shadow: 0 18px 44px rgba(2, 6, 23, 0.45), 0 0 34px hsl(var(--ac) 95% 60% / 0.22); }
+
+    .deus-x-period { font-size: 0.78rem; letter-spacing: 0.14em; color: hsl(var(--ac) 92% 68%); text-transform: uppercase; }
+    .deus-x-period b { font-weight: 400; color: #94a3b8; }
+
+    .deus-x-company {
+      margin-top: 0.4rem;
+      font-family: 'Orbitron', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: clamp(1.3rem, 1.6vw + 0.9rem, 1.9rem);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #f9fafb;
+    }
+
+    .deus-x-role { margin-top: 0.15rem; font-family: 'Inter', system-ui, sans-serif; font-size: 1rem; font-weight: 600; color: #e2e8f0; }
+    .deus-x-roles { margin: 0.2rem 0 0; padding: 0; list-style: none; display: grid; gap: 0.3rem; }
+    .deus-x-roles li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.8rem; font-family: 'Inter', system-ui, sans-serif; }
+    .deus-x-roles b { font-size: 1rem; font-weight: 600; color: #e2e8f0; }
+    .deus-x-roles span { font-size: 0.74rem; letter-spacing: 0.1em; color: hsl(var(--ac) 80% 70%); }
+    .deus-x-roles li:first-child b { color: #fff; }
+
+    .deus-x-loc { margin-top: 0.35rem; font-size: 0.78rem; letter-spacing: 0.1em; color: #94a3b8; }
+
+    .deus-x-bullets { margin: 0.95rem 0 0; padding: 0; list-style: none; display: grid; gap: 0.55rem; }
+
+    .deus-x-bullets li {
+      position: relative;
+      padding-left: 1.1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: #aab6c8;
+    }
+
+    .deus-x-bullets li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 0.4rem;
+      height: 0.4rem;
+      transform: rotate(45deg);
+      background: hsl(var(--ac) 85% 62% / 0.85);
+    }
+
+    .deus-x-stat {
+      display: inline-block;
+      margin-top: 0.9rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 0.4rem;
+      border: 1px solid hsl(var(--ac) 90% 62% / 0.7);
+      background: hsl(var(--ac) 85% 50% / 0.16);
+      color: #fff;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      box-shadow: 0 0 18px hsl(var(--ac) 95% 60% / 0.3);
+    }
+
+    .deus-x-card .deus-ui-tags { margin-top: 1rem; }
+
+    /* material: videos y fotos */
+    .deus-x-media { display: flex; flex-direction: column; justify-content: center; gap: 0.7rem; min-width: 0; }
+    .deus-x-media.is-pair { gap: 0.7rem; }
+
+    .deus-vid {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      border-radius: 0.65rem;
+      overflow: hidden;
+      border: 1px solid hsl(var(--ac) 40% 70% / 0.3);
+      background: radial-gradient(circle at 50% 40%, hsl(var(--ac) 70% 40% / 0.28), #020617 70%);
+      cursor: pointer;
+    }
+
+    .deus-vid video { width: 100%; height: 100%; object-fit: cover; display: block; background: transparent; }
+
+    .deus-vid-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 3.4rem;
+      height: 3.4rem;
+      margin: -1.7rem 0 0 -1.7rem;
+      border-radius: 50%;
+      background: rgba(2, 6, 23, 0.55);
+      border: 1px solid hsl(var(--ac) 90% 70% / 0.85);
+      box-shadow: 0 0 22px hsl(var(--ac) 95% 60% / 0.5);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .deus-vid-play::after {
+      content: "";
+      position: absolute;
+      left: 1.35rem;
+      top: 1rem;
+      border-left: 0.9rem solid #fff;
+      border-top: 0.7rem solid transparent;
+      border-bottom: 0.7rem solid transparent;
+    }
+
+    .deus-vid:hover .deus-vid-play { transform: scale(1.1); }
+    .deus-vid.is-playing .deus-vid-play { opacity: 0; pointer-events: none; }
+
+    .deus-vid-cap {
+      position: absolute;
+      left: 0.6rem;
+      bottom: 0.5rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.3rem;
+      background: rgba(2, 6, 23, 0.7);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+
+    .deus-vid-fs {
+      position: absolute;
+      right: 0.5rem;
+      bottom: 0.4rem;
+      width: 1.9rem;
+      height: 1.9rem;
+      border-radius: 0.4rem;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: rgba(2, 6, 23, 0.7);
+      color: #e2e8f0;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .deus-vid-fs:hover { border-color: hsl(var(--ac) 90% 65%); color: #fff; }
+    .deus-vid:fullscreen { aspect-ratio: auto; border-radius: 0; background: #000; }
+    .deus-vid:fullscreen video { object-fit: contain; }
+
+    .deus-x-stage { aspect-ratio: 16 / 10; border-radius: 0.65rem; overflow: hidden; border: 1px solid hsl(var(--ac) 40% 70% / 0.3); background: #020617; }
+    .deus-x-stage img { display: block; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.25s ease-out; }
+    .deus-x-stage img.is-swapping { opacity: 0; }
+    .deus-x-card .deus-ui-thumb.is-on { border-color: hsl(var(--ac) 95% 62% / 0.95); box-shadow: 0 0 18px hsl(var(--ac) 95% 60% / 0.5); }
+
+    /* entrada */
+    .deus-exp .deus-x-head, .deus-exp .deus-strip, .deus-exp .deus-x-card { opacity: 0; transform: translateY(22px); }
+    .deus-exp .deus-x-head.is-in, .deus-exp .deus-strip.is-in, .deus-exp .deus-x-card.is-in { opacity: 1; transform: none; }
+    .deus-exp .deus-x-head, .deus-exp .deus-strip { transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }
+
+    /* el hub de React (hub de 3 tarjetas + acordeones) queda reemplazado por «Selected work», el árbol y esta línea de tiempo */
+    #experience-hub { display: none !important; }
+
+    @media (max-width: 900px) {
+      .deus-x-card { grid-template-columns: minmax(0, 1fr); padding: 1.3rem 1.2rem; }
+    }
+
+    @media (max-width: 640px) {
+      .deus-exp { padding: 2.4rem 1.25rem 0.5rem; }
+      .deus-x-head { padding: 1.3rem 1.25rem; }
+      .deus-strip { padding: 0.9rem 0.8rem 1.5rem; }
+      .deus-bar { font-size: 0.6rem; padding: 0 0.35rem; letter-spacing: 0.04em; }
+      .deus-x-list { padding-left: 1.7rem; }
+      .deus-x-list::before { left: 0.3rem; }
+      .deus-x-card::before { left: -1.6rem; width: 0.65rem; height: 0.65rem; }
+      .deus-x-card::after { left: -1rem; width: 1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .deus-exp .deus-x-head, .deus-exp .deus-strip, .deus-exp .deus-x-card { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ===== REEL: marco con póster + contacto ===== */
+    .deus-reel { position: relative; padding: 3rem 1.5rem 2rem; max-width: 1148px; margin: 0 auto; }
+
+    .deus-reel-head { padding: 1.7rem 1.8rem; max-width: 760px; margin: 0 auto; text-align: center; --bh: 185; }
+    .deus-reel-head .deus-modules-eyebrow { text-align: center; }
+    .deus-reel-head .deus-work-lead { margin: 0 auto; }
+
+    .deus-reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }
+    .deus-reveal.is-in { opacity: 1; transform: none; }
+
+    .deus-reel-frame {
+      max-width: 1000px;
+      margin: 1.8rem auto 0;
+      padding: 2px;
+      border-radius: 1.1rem;
+      background: linear-gradient(135deg, hsl(185 90% 60% / 0.75), hsl(260 80% 62% / 0.5), hsl(330 90% 62% / 0.75));
+      box-shadow: 0 0 60px hsl(185 95% 55% / 0.22), 0 0 100px hsl(330 95% 60% / 0.16), 0 24px 60px rgba(2, 6, 23, 0.6);
+    }
+
+    .deus-reel-screen { position: relative; aspect-ratio: 16 / 9; border-radius: 1rem; overflow: hidden; background: #000; }
+    .deus-reel-screen img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease-out, filter 0.3s; filter: saturate(1.05); }
+    .deus-reel-screen:hover img { transform: scale(1.03); }
+    .deus-reel-screen::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 55%, transparent 35%, rgba(2, 6, 23, 0.55)); pointer-events: none; }
+    .deus-reel-screen.is-video::after { display: none; }
+    .deus-reel-screen video { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; }
+
+    .deus-reel-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      width: 5.2rem;
+      height: 5.2rem;
+      margin: -2.6rem 0 0 -2.6rem;
+      border-radius: 50%;
+      border: 1px solid hsl(185 95% 72% / 0.9);
+      background: radial-gradient(circle at top, hsl(185 95% 60% / 0.35), rgba(2, 6, 23, 0.85));
+      box-shadow: 0 0 36px hsl(185 95% 60% / 0.6);
+      cursor: pointer;
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    }
+
+    .deus-reel-play:hover, .deus-reel-play:focus-visible { transform: scale(1.08); box-shadow: 0 0 56px hsl(185 95% 62% / 0.9); outline: none; }
+    .deus-reel-play i { position: absolute; left: 2.05rem; top: 1.5rem; border-left: 1.4rem solid #fff; border-top: 1.05rem solid transparent; border-bottom: 1.05rem solid transparent; }
+
+    .deus-reel-ring { position: absolute; inset: -1px; border-radius: 50%; border: 1px solid hsl(185 95% 70% / 0.6); animation: deus-reel-ring 3.2s ease-out infinite; pointer-events: none; }
+    .deus-reel-ring.r2 { animation-delay: 1.6s; }
+    @keyframes deus-reel-ring { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.9); opacity: 0; } }
+
+    .deus-reel-cap {
+      position: absolute;
+      z-index: 1;
+      left: 1rem;
+      bottom: 0.9rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 0.35rem;
+      background: rgba(2, 6, 23, 0.7);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+
+    .deus-reel-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.8rem; margin-top: 2rem; }
+    .deus-reel-talk { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: #94a3b8; margin-right: 0.4rem; }
+
+    .deus-reel-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid hsl(var(--ac) 95% 62% / 0.85);
+      background: radial-gradient(circle at top, hsl(var(--ac) 95% 60% / 0.22), rgba(15, 23, 42, 0.96));
+      color: #f1f5f9;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 1), 0 0 24px hsl(var(--ac) 95% 60% / 0.4);
+      transition: transform 0.18s ease-out, box-shadow 0.18s ease-out;
+    }
+
+    .deus-reel-btn:hover, .deus-reel-btn:focus-visible { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(2, 6, 23, 0.9), 0 0 36px hsl(var(--ac) 95% 60% / 0.8); outline: none; }
+
+    /* el reel original de React queda reemplazado */
+    #final-video { display: none !important; }
+
+    @media (max-width: 640px) {
+      .deus-reel { padding: 2.4rem 1.25rem 1.5rem; }
+      .deus-reel-head { padding: 1.3rem 1.25rem; }
+      .deus-reel-play { width: 4rem; height: 4rem; margin: -2rem 0 0 -2rem; }
+      .deus-reel-play i { left: 1.6rem; top: 1.15rem; border-left-width: 1.1rem; border-top-width: 0.82rem; border-bottom-width: 0.82rem; }
+      .deus-reel-cap { left: 0.6rem; bottom: 0.5rem; font-size: 0.6rem; }
+      .deus-reel-btn { padding: 0.6rem 1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .deus-reveal { opacity: 1; transform: none; transition: none; }
+      .deus-reel-ring { animation: none; }
+    }
+
+    /* ===== Índice flotante ===== */
+    .deus-nav { position: fixed; right: 1rem; top: 50%; transform: translateY(-50%); z-index: 35; }
+    .deus-nav ul { list-style: none; margin: 0; padding: 0.7rem 0.45rem; display: grid; gap: 0.15rem; border-radius: 999px; background: rgba(2, 6, 23, 0.45); border: 1px solid rgba(148, 163, 184, 0.14); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+    .deus-nav a { position: relative; display: flex; align-items: center; justify-content: flex-end; height: 1.6rem; padding: 0 0.25rem; text-decoration: none; }
+    .deus-nav-dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; border: 1.5px solid rgba(148, 163, 184, 0.7); background: transparent; transition: transform 0.2s, background 0.2s, box-shadow 0.2s, border-color 0.2s; }
+    .deus-nav a:hover .deus-nav-dot, .deus-nav a:focus-visible .deus-nav-dot { transform: scale(1.35); border-color: #67e8f9; }
+    .deus-nav a.is-on .deus-nav-dot { background: #22d3ee; border-color: #67e8f9; box-shadow: 0 0 12px rgba(34, 211, 238, 0.9); transform: scale(1.25); }
+    .deus-nav a:focus-visible { outline: none; }
+    .deus-nav-label {
+      position: absolute;
+      right: 1.6rem;
+      top: 50%;
+      transform: translate(8px, -50%);
+      padding: 0.3rem 0.65rem;
+      border-radius: 0.4rem;
+      background: rgba(2, 6, 23, 0.88);
+      border: 1px solid rgba(103, 232, 249, 0.35);
+      color: #e2e8f0;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.18s, transform 0.18s;
+    }
+    .deus-nav a:hover .deus-nav-label, .deus-nav a:focus-visible .deus-nav-label { opacity: 1; transform: translate(0, -50%); }
+    .deus-nav { transition: opacity 0.35s ease-out; }
+    .deus-nav.is-away { opacity: 0; pointer-events: none; }
+    @media (max-width: 900px) { .deus-nav { right: 0.25rem; } .deus-nav ul { padding: 0.5rem 0.3rem; } .deus-nav a { height: 1.35rem; } }
+    /* Versión móvil: un riel delgado pegado al borde (≈12 px de ancho), puntos chicos y zona de toque amplia hacia la izquierda;
+       se atenúa cuando no hay scroll y, al tocar un punto, muestra un momento el nombre de la sección. */
+    @media (max-width: 760px), (pointer: coarse) {
+      .deus-nav { right: 0; transition: opacity 0.35s ease-out; }
+      .deus-nav ul { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 0.4rem 0; width: 0.8rem; box-sizing: content-box; border-radius: 999px 0 0 999px; border-right: 0; background: rgba(2, 6, 23, 0.4); }
+      .deus-nav li { width: 100%; }
+      .deus-nav a { min-width: 0; min-height: 0; height: 1.9rem; width: 100%; padding: 0; justify-content: center; -webkit-tap-highlight-color: transparent; }
+      .deus-nav a::before { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 2.6rem; } /* zona de toque cómoda sin ensanchar lo visible */
+      .deus-nav-dot { width: 0.3rem; height: 0.3rem; border-width: 1px; }
+      .deus-nav a.is-on .deus-nav-dot { box-shadow: 0 0 8px rgba(34, 211, 238, 0.9); transform: scale(1.4); }
+      .deus-nav-label { right: 1.3rem; padding: 0.25rem 0.55rem; font-size: 0.62rem; }
+      .deus-nav a.is-flash .deus-nav-label { opacity: 1; transform: translate(0, -50%); }
+      .deus-nav.is-idle:not(.is-away) { opacity: 0.4; }
+    }
+    @media (prefers-reduced-motion: reduce) { .deus-nav-dot, .deus-nav-label { transition: none; } }
+
+    /* ===== Cierre: tramo alto para ver la estructura final + mensaje ===== */
+    .deus-finale { position: relative; min-height: 118vh; display: flex; align-items: flex-end; justify-content: center; padding: 0 1.5rem 3rem; --bh: 175; }
+
+    .deus-finale-card { width: 100%; max-width: 720px; padding: 1.4rem 1.8rem 1.2rem; text-align: center; }
+    .deus-finale-card .deus-modules-eyebrow { text-align: center; }
+
+    .deus-finale-title {
+      font-family: 'Orbitron', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: clamp(1.05rem, 1.6vw + 0.8rem, 1.6rem);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #f9fafb;
+      margin-bottom: 0.7rem;
+    }
+
+    .deus-finale-quote {
+      min-height: 3.4em;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(0.95rem, 0.5vw + 0.85rem, 1.12rem);
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    .deus-caret { display: inline-block; width: 2px; height: 1.05em; margin-left: 3px; vertical-align: -0.15em; background: #67e8f9; box-shadow: 0 0 8px #22d3ee; animation: deus-caret 1s steps(2, start) infinite; }
+    @keyframes deus-caret { to { visibility: hidden; } }
+
+    .deus-finale-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; margin-top: 0.9rem; }
+
+    .deus-finale-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(34, 211, 238, 0.85);
+      background: radial-gradient(circle at top, rgba(34, 211, 238, 0.24), rgba(15, 23, 42, 0.96));
+      color: #ecfeff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 1), 0 0 22px rgba(34, 211, 238, 0.4);
+      transition: transform 0.18s ease-out, box-shadow 0.18s ease-out;
+    }
+
+    .deus-finale-btn.is-ghost { border-color: rgba(148, 163, 184, 0.45); background: rgba(15, 23, 42, 0.6); box-shadow: none; color: #cbd5e1; }
+    .deus-finale-btn:hover, .deus-finale-btn:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(2, 6, 23, 0.9), 0 0 30px rgba(34, 211, 238, 0.7); outline: none; }
+    .deus-finale-btn.is-ghost:hover { box-shadow: 0 14px 34px rgba(2, 6, 23, 0.9); }
+
+    .deus-finale-hint { margin-top: 0.9rem; font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: #64748b; }
+
+    @media (max-width: 640px) {
+      .deus-finale { padding: 0 2.2rem 2rem 1.4rem; min-height: 112vh; }
+      .deus-finale-card { padding: 1.1rem 1.1rem 0.9rem; }
+      .deus-finale-quote { min-height: 5.4em; }
+      .deus-finale-hint { display: none; }
+      .deus-finale-actions { gap: 0.5rem; margin-top: 0.6rem; }
+      .deus-finale-btn { padding: 0.5rem 0.85rem; font-size: 0.78rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { .deus-caret { animation: none; } }
+
+    /* Las secciones nuevas son hijos de <body> (React no las toca). Lo que queda de React después del hero está oculto. */
+    #root footer, #root #final-video, #root #experience-hub { display: none !important; }
+    .deus-footer-cta { display: flex; justify-content: center; margin-bottom: 1.6rem; }
+    .deus-footer { padding: 1.4rem 1rem 2.2rem; text-align: center; font-family: 'Share Tech Mono', ui-monospace, monospace; font-size: 0.78rem; letter-spacing: 0.12em; color: #64748b; }
+    html:not([lang="es"]) [data-lang="es"], html[lang="es"] [data-lang="en"] { display: none; }
+
+    /* ===== Entrada del hero: las letras del nombre aparecen mientras se forma la constelación (deus-genesis.js) ===== */
+    @keyframes deus-letter {
+      0% { opacity: 0; transform: translateY(22px) scale(0.6); filter: blur(10px); }
+      55% { opacity: 1; }
+      100% { opacity: 1; transform: none; filter: blur(0); }
+    }
+    @keyframes deus-fadeup { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    main h1 .magnetic-char { animation: deus-letter 0.95s cubic-bezier(0.2, 0.8, 0.2, 1) backwards; }
+    main h1 > span:nth-child(1) > .magnetic-char:nth-child(1) { animation-delay: 0.60s; }
+    main h1 > span:nth-child(2) > .magnetic-char:nth-child(1) { animation-delay: 1.12s; }
+    main h1 > span:nth-child(1) > .magnetic-char:nth-child(2) { animation-delay: 0.67s; }
+    main h1 > span:nth-child(2) > .magnetic-char:nth-child(2) { animation-delay: 1.18s; }
+    main h1 > span:nth-child(1) > .magnetic-char:nth-child(3) { animation-delay: 0.75s; }
+    main h1 > span:nth-child(2) > .magnetic-char:nth-child(3) { animation-delay: 1.24s; }
+    main h1 > span:nth-child(1) > .magnetic-char:nth-child(4) { animation-delay: 0.82s; }
+    main h1 > span:nth-child(2) > .magnetic-char:nth-child(4) { animation-delay: 1.30s; }
+    main h1 > span:nth-child(1) > .magnetic-char:nth-child(5) { animation-delay: 0.90s; }
+    main h1 > span:nth-child(2) > .magnetic-char:nth-child(5) { animation-delay: 1.36s; }
+    main h1 > span:nth-child(1) > .magnetic-char:nth-child(6) { animation-delay: 0.97s; }
+    main h1 > span:nth-child(2) > .magnetic-char:nth-child(6) { animation-delay: 1.42s; }
+    main h1 > span:nth-child(1) > .magnetic-char:nth-child(7) { animation-delay: 1.05s; }
+    main h1 > span:nth-child(2) > .magnetic-char:nth-child(7) { animation-delay: 1.48s; }
+    main h1 > span:nth-child(1) > .magnetic-char:nth-child(8) { animation-delay: 1.12s; }
+    main h1 > span:nth-child(2) > .magnetic-char:nth-child(8) { animation-delay: 1.54s; }
+    main h1 > span:nth-child(1) > .magnetic-char:nth-child(9) { animation-delay: 1.20s; }
+    main h1 > span:nth-child(2) > .magnetic-char:nth-child(9) { animation-delay: 1.60s; }
+    main h1 > span:nth-child(1) > .magnetic-char:nth-child(10) { animation-delay: 1.27s; }
+    main h1 > span:nth-child(2) > .magnetic-char:nth-child(10) { animation-delay: 1.66s; }
+    main h1 > span:nth-child(1) > .magnetic-char:nth-child(11) { animation-delay: 1.35s; }
+    main h1 > span:nth-child(2) > .magnetic-char:nth-child(11) { animation-delay: 1.72s; }
+    main h1 > span:nth-child(1) > .magnetic-char:nth-child(12) { animation-delay: 1.42s; }
+    main h1 > span:nth-child(2) > .magnetic-char:nth-child(12) { animation-delay: 1.78s; }
+    main h1 + p { animation: deus-fadeup 1s ease-out 2.0s backwards !important; }
+    main .mt-8 { animation: deus-fadeup 1s ease-out 2.25s backwards !important; }
+
+    /* los paneles desplegables del original (PROJECTS / CORE_COMPETENCIES / WORK_EXPERIENCE) ya no se muestran */
+    #root #main-sections { display: none !important; }
+
+    /* ===== CTA de WhatsApp al pie de página ===== */
+    .deus-hero-wa {
+      pointer-events: auto;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.9rem 1.8rem 0.9rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid rgba(74, 222, 128, 0.85);
+      background: radial-gradient(circle at top, rgba(34, 197, 94, 0.28), rgba(2, 6, 23, 0.92));
+      color: #f0fdf4;
+      font-family: 'Inter', system-ui, sans-serif;
+      text-decoration: none;
+      box-shadow: 0 0 0 1px rgba(2, 6, 23, 1), 0 0 30px rgba(34, 197, 94, 0.45);
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    }
+    .deus-hero-wa:hover, .deus-hero-wa:focus-visible { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(2, 6, 23, 0.9), 0 0 46px rgba(34, 197, 94, 0.85); outline: none; }
+    .deus-hero-wa svg { flex: none; }
+    .deus-hero-wa b { font-family: 'Orbitron', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    .deus-hero-wa-sub { font-size: 0.78rem; letter-spacing: 0.08em; color: #bbf7d0; opacity: 0.85; }
+    .deus-hero-wa-ring { position: absolute; inset: -1px; border-radius: 999px; border: 1px solid rgba(74, 222, 128, 0.6); animation: deus-hero-ring 3s ease-out infinite; pointer-events: none; }
+    @keyframes deus-hero-ring { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.18, 1.7); opacity: 0; } }
+    @media (max-width: 640px) { .deus-footer { padding-bottom: 6.8rem; } .deus-hero-wa { padding: 0.7rem 1.2rem 0.7rem 1rem; gap: 0.55rem; } .deus-hero-wa b { font-size: 0.82rem; } .deus-hero-wa-sub { display: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      main h1 .magnetic-char, main h1 + p, main .mt-8 { animation: none !important; }
+      .deus-hero-wa-ring { animation: none; }
+    }
+  </style>
+  <script>
+    /* El fondo de partículas del bundle (canvas .-z-10) se sustituye por el hélix de /assets/deus-genesis.js:
+       al negarle el contexto 2D, el bundle ni dibuja ni calcula sus 2,500 partículas. */
+    (function () {
+      var g = HTMLCanvasElement.prototype.getContext;
+      HTMLCanvasElement.prototype.getContext = function () {
+        if (this.classList && this.classList.contains("-z-10")) return null;
+        return g.apply(this, arguments);
+      };
+    })();
+
+    // El React original sigue montando (ocultos) el hub, el panel de proyectos y el reel: sus imágenes (más de 1 MB, la mayor
+    // de 1.1 MB) y un video que ni existe se descargaban sin verse y retrasaban el evento «load» (la pestaña se quedaba cargando).
+    // Aquí se cancelan. Si algún día se vuelve a mostrar ese contenido, quitar este bloque.
+    (function () {
+      var re = /\/assets\/(images\/|videos\/projects\/Reel\.webm)/;
+      var ok = function (el, v) { return typeof v === "string" && re.test(v) && el && (el.tagName === "IMG" || el.tagName === "VIDEO" || el.tagName === "SOURCE"); };
+      var sa = Element.prototype.setAttribute;
+      Element.prototype.setAttribute = function (n, v) {
+        if (n === "src" && ok(this, v)) return sa.call(this, "data-blocked-src", v);
+        return sa.apply(this, arguments);
+      };
+      [HTMLImageElement, HTMLMediaElement].forEach(function (C) {
+        var d = Object.getOwnPropertyDescriptor(C.prototype, "src");
+        if (!d || !d.set) return;
+        Object.defineProperty(C.prototype, "src", { get: d.get, enumerable: d.enumerable, configurable: true, set: function (v) { if (ok(this, v)) sa.call(this, "data-blocked-src", v); else d.set.call(this, v); } });
+      });
+    })();
+  </script>
+  <script defer src="/assets/deus-smooth.js?v=8e2aa524b4"></script>
+  <script defer src="/assets/deus-lazy.js?v=3993208e05"></script>
+  <script defer src="/assets/deus-genesis.js?v=c3d478a484"></script>
+  <script defer src="/assets/deus-nav.js?v=9cea5ab980"></script>
+  <script defer src="/assets/deus-work.js?v=f7f0181719"></script>
+  <script defer src="/assets/deus-skills.js?v=37f48856d9"></script>
+  <script defer src="/assets/deus-finale.js?v=a85c27fea9"></script>
+  <script defer src="/assets/deus-reel.js?v=ab5d2a86d0"></script>
+  <script defer src="/assets/deus-exp.js?v=26b3f89922"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0",
+    "vite": "https://aistudiocdn.com/vite@^7.1.7",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.0.4"
+  }
+}
+</script>
+  <!-- el visor 3D (250 KB) se carga solo cuando la tarjeta de AR se acerca: ver deus-work.js -->
+
+  <script type="module" crossorigin src="/assets/index-Cwd6uaYc.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Dzn3FhSB.css">
+</head>
+
+<body class="bg-gray-50 text-slate-700 dark:bg-transparent dark:text-slate-300">
+  <div id="root"></div>
+
+  <!-- Selected work: lo llena /assets/deus-work.js y un script lo mueve justo debajo del hero. -->
+  <section class="deus-work" id="deus-work" aria-label="Selected work"></section>
+
+  <!-- CORE_COMPETENCIES.DLL como árbol de habilidades: lo llena /assets/deus-skills.js -->
+  <section class="deus-skills" id="deus-skills" aria-label="Core competencies"></section>
+
+  <!-- WORK_EXPERIENCE.EXE como línea de tiempo: lo llena /assets/deus-exp.js -->
+  <section class="deus-exp" id="deus-exp" aria-label="Work experience"></section>
+
+  <!-- REEL y contacto: lo llena /assets/deus-reel.js -->
+  <section class="deus-reel" id="deus-reel" aria-label="Reel"></section>
+
+  <!-- Cierre: tramo alto para ver la estructura final + agradecimiento; lo llena /assets/deus-finale.js -->
+  <section class="deus-finale" id="deus-finale" aria-label="Thanks"></section>
+
+  <footer class="deus-footer">
+    <div class="deus-footer-cta">
+      <a class="deus-hero-wa" href="https://wa.me/528131042983?text=Hola%2C%20vi%20tu%20portafolio%20y%20quiero%20saber%20m%C3%A1s%20sobre%20tus%20servicios." target="_blank" rel="noopener noreferrer">
+        <span class="deus-hero-wa-ring"></span>
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 20l1.2-4A8 8 0 1112 20a8 8 0 01-3.8-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9.2c.3 2.6 2.4 4.8 5.6 5.6l1-1.2-1.8-1-.9.6c-.9-.4-1.6-1.1-2-2l.6-.9-1-1.8z" fill="currentColor"/></svg>
+        <b><span data-lang="en">Let's talk</span><span data-lang="es">Hablemos</span></b>
+        <span class="deus-hero-wa-sub"><span data-lang="en">on WhatsApp</span><span data-lang="es">por WhatsApp</span></span>
+      </a>
+    </div>
+    <span data-lang="en">Developed by Deus © 2025</span><span data-lang="es">Desarrollado por Deus © 2025</span>
+  </footer>
+
+  <!-- User's new Chatbase AI assistant script -->
+  <script>
+    (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "VNdrIseOLyNeQ0_I2OqJv"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; var go = function () { setTimeout(onLoad, 900) }; if (document.readyState !== "loading") { go() } else { document.addEventListener("DOMContentLoaded", go) } })();
+  </script>
+  <script>
+    /* El enlace de WhatsApp del hero (que pinta React) lleva un mensaje inicial. Es lo único que se conserva del script original:
+       el resto movía nodos dentro del DOM de React y maquillaba los paneles desplegables que ya no se muestran. */
+    (function () {
+      var desired = "https://wa.me/528131042983?text=Hola%2C%20vi%20tu%20portafolio%20y%20quiero%20saber%20m%C3%A1s%20sobre%20tus%20servicios.";
+      var tries = 0;
+      var iv = setInterval(function () {
+        var a = document.querySelector('main a[href^="https://wa.me/"]');
+        if (a) { if (a.getAttribute("href") !== desired) a.setAttribute("href", desired); clearInterval(iv); }
+        else if (++tries > 60) clearInterval(iv);
+      }, 250);
+    })();
+  </script>
+</body>
+
+</html>
