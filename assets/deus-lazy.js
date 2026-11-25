@@ -1,4 +1,4 @@
-/* yosoydeus.com · carga diferida propia
+/* yosoydeus.dev · carga diferida propia
    Las imágenes de los módulos llevan data-src (y los videos data-poster): aquí se les da su fuente cuando están a menos de
    ~1100 px de la pantalla. No usa loading="lazy" ni IntersectionObserver: esos no se disparan si la pestaña no está visible
    o si el navegador los aplaza, y las imágenes se quedaban sin cargar. Funciona con scroll, timers y cambios de layout. */

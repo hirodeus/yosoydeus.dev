@@ -1,4 +1,4 @@
-/* yosoydeus.com · cierre
+/* yosoydeus.dev · cierre
    Un tramo alto y casi vacío al final de la página: el fondo termina de armar su estructura geométrica, centrada y a la vista
    (deus-genesis.js lee #deus-finale para centrarla y subirla). Abajo, un agradecimiento y una frase al azar sobre IA, futuro y
    tecnología, que se escribe sola; el botón trae otra. Sigue html[lang]. */

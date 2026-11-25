@@ -1,0 +1,9 @@
+{
+    "name": "TraeSoundeus Visualizer",
+    "short_name": "Visualizer",
+    "description": "Spotify‑like audio visualizer with premium 3D effects",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#111",
+    "theme_color": "#1e90ff"
+}

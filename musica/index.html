@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deus Works</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <meta name="description" content="Audio-reactive visualization for Nous Deus discography" />
+
+  <link rel="stylesheet" href="./styles.css?v=1753600000004" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e90ff">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <!-- Three.js ES Modules -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/examples/": "https://unpkg.com/three@0.160.0/examples/"
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <canvas id="splashCanvas"></canvas>
+  <div id="overlay" role="dialog" aria-label="Welcome">
+    <div class="overlay-inner">
+      <div class="splash-card">
+        <img class="splash-cover" src="./assets/SplashCover.png" alt="Portada principal Nous Deus" />
+        <button id="btnStart" class="splash-action" type="button" aria-label="Start audio">Iniciar</button>
+      </div>
+      <div class="splash-info">
+        <span class="subtitle">Nous Deus Discografía Reactiva</span><br />
+        <a href="https://yosoydeus.dev/" target="_blank" rel="noopener">YOSOYDEUS</a>
+        <div id="visitCount" style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.6; display: none;">
+          Visitante #<span id="visitNumber"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ui" aria-label="Player Controls" class="hidden">
+    <!-- Visualizer canvas will be visible here -->
+  </div>
+
+  <div id="container">
+    <canvas id="fallbackCanvas" class="hidden"></canvas>
+  </div>
+
+  <audio id="audio" preload="metadata" crossorigin="anonymous">
+    <!-- Browser will automatically detect format from file extension, but we ensure support -->
+    <source type="audio/mpeg"><!-- MP3 -->
+    <source type="audio/wav"><!-- WAV -->
+    <source type="audio/flac"><!-- FLAC -->
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <!-- Main Content Area -->
+  <div id="mainView" class="main-view">
+    <!-- Dynamic content will be loaded here -->
+  </div>
+
+  <!-- Floating Now Playing Bar -->
+  <div id="nowBar" class="now-bar hidden" aria-label="Barra de reproducción">
+    <div class="nb-content">
+      <!-- Track Info -->
+      <div class="nb-track-info">
+        <img id="nbCover" class="nb-cover" alt="Carátula" />
+        <div class="nb-text">
+          <div id="nbTitle" class="nb-title">—</div>
+          <div id="nbMeta" class="nb-meta">—</div>
+          <div id="nbPlayCount" class="nb-play-count" style="font-size: 0.7rem; opacity: 0.6; margin-top: 2px;"></div>
+        </div>
+      </div>
+
+      <!-- Controls (Right side) -->
+      <div class="nb-controls-mini">
+        <button id="btnPrev2" class="nb-btn nb-btn-icon" aria-label="Anterior">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M15 18l-6-6 6-6"/>
+            <path d="M6 5h2v14H6z"/>
+          </svg>
+        </button>
+        <button id="btnMixer" class="nb-btn nb-btn-icon" aria-label="Audio y ecualizador">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="21" x2="4" y2="14"></line>
+            <line x1="4" y1="10" x2="4" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12" y2="3"></line>
+            <line x1="20" y1="21" x2="20" y2="16"></line>
+            <line x1="20" y1="12" x2="20" y2="3"></line>
+            <line x1="1" y1="14" x2="7" y2="14"></line>
+            <line x1="9" y1="8" x2="15" y2="8"></line>
+            <line x1="17" y1="16" x2="23" y2="16"></line>
+          </svg>
+        </button>
+        <button id="btnShare" class="nb-btn nb-btn-icon" aria-label="Compartir">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+        </button>
+        <button id="btnLike" class="nb-btn nb-btn-icon" aria-label="Marcar como favorito">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+            </path>
+          </svg>
+        </button>
+        <button id="btnPlayPause2" class="nb-btn nb-btn-play" aria-label="Play/Pause">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+        <button id="btnNext2" class="nb-btn nb-btn-icon" aria-label="Siguiente">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9 6l6 6-6 6"/>
+            <path d="M16 5h2v14h-2z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Progress Bar (Bottom edge) -->
+    <div id="nbProgressContainer" class="nb-progress-container">
+      <div class="nb-progress-bg"></div>
+      <div id="nbProgressFill" class="nb-progress-fill"></div>
+      <div id="nbCurrent" class="nb-time nb-time-left">0:00</div>
+      <div id="nbTotal" class="nb-time nb-time-right">0:00</div>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation Bar -->
+  <nav id="bottomNav" class="bottom-nav">
+    <button data-view="home" class="nav-btn active" aria-label="Inicio">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+      <span>Inicio</span>
+    </button>
+    <button data-view="search" class="nav-btn" aria-label="Buscar">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <span>Buscar</span>
+    </button>
+    <button data-view="albums" class="nav-btn" aria-label="Tu Biblioteca">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 18V5l12-2v13"></path>
+        <circle cx="6" cy="18" r="3"></circle>
+        <circle cx="18" cy="16" r="3"></circle>
+      </svg>
+      <span>Biblioteca</span>
+    </button>
+    <button data-view="playlist" class="nav-btn" aria-label="Tus Listas">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 6h14"></path>
+        <path d="M3 12h14"></path>
+        <path d="M3 18h8"></path>
+        <circle cx="19" cy="6" r="2"></circle>
+        <circle cx="19" cy="12" r="2"></circle>
+        <circle cx="13" cy="18" r="2"></circle>
+      </svg>
+      <span>Listas</span>
+    </button>
+    <button data-view="visuals" class="nav-btn" aria-label="Visuales">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+        <circle cx="12" cy="12" r="3"></circle>
+      </svg>
+      <span>Visuales</span>
+    </button>
+  </nav>
+
+  <!-- App script as module for dynamic imports -->
+  <script type="module" src="./splash-animation.js?v=1753600000004"></script>
+  <script type="module" src="./js/main.js?v=1753600000004"></script>
+  <noscript>
+    <div class="noscript">JavaScript required for audio-reactive visuals. Audio can be played via the browser default
+      controls.</div>
+  </noscript>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+          console.log('Service Worker unregistered');
+        }
+      });
+    }
+    // Clear all caches
+    if ('caches' in window) {
+      caches.keys().then(function (names) {
+        for (let name of names) caches.delete(name);
+        console.log('Caches cleared');
+      });
+    }
+    // Clear storage removed to preserve visitor state
+    // localStorage.clear();
+    // sessionStorage.clear();
+    console.log('Storage cleared (skipped)');
+  </script>
+</body>
+
+</html>

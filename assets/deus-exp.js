@@ -1,4 +1,4 @@
-/* yosoydeus.com · WORK_EXPERIENCE.EXE como línea de tiempo
+/* yosoydeus.dev · WORK_EXPERIENCE.EXE como línea de tiempo
    - Arriba, una tira de carrera (2019 → hoy) con un carril por empresa (y una barra por rol si hubo ascenso): se ve de un vistazo cuándo y cuánto tiempo.
    - Debajo, una tarjeta por rol con todo abierto (sin clics): periodo, ubicación, logros, tags y su material (video o fotos).
    Cada video muestra un póster y solo se descarga al pasar el mouse (o al tocar).

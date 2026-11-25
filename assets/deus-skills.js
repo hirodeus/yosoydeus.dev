@@ -1,4 +1,4 @@
-/* yosoydeus.com · CORE_COMPETENCIES.DLL como árbol de habilidades
+/* yosoydeus.dev · CORE_COMPETENCIES.DLL como árbol de habilidades
    Raíz: las tres competencias núcleo del sitio (Unreal Engine | AI/ML | XR). Ramas: las 4 categorías de skills
    originales con TODAS sus skills (el original cortaba la lista a 16 por categoría y escondía Tricaster).
    Pasa el mouse (o toca) un nodo núcleo para encender las skills relacionadas. Sigue html[lang]. */

@@ -1,4 +1,4 @@
-/* yosoydeus.com · «Selected work»
+/* yosoydeus.dev · «Selected work»
    Todos los proyectos con enlace en el mismo formato de tarjeta: texto a un lado y, al otro, una galería que se
    recorre con miniaturas (sin abrir paneles). Sustituye el hub de 3 tarjetas, la franja de Webs y el panel
    PROJECTS.INIT, que repetían esta misma información. Sigue el idioma del sitio (html[lang]). */
@@ -23,9 +23,9 @@
         es: "Un viaje interactivo de autodescubrimiento. Enfrenta tu sombra en esta experiencia psicológica gamificada."
       },
       tags: ["REACT", "TAILWIND", "D3.JS", "WEB AUDIO"],
-      link: "https://juegodesombra.yosoydeus.com",
+      link: "/juegodesombra/",
       label: { en: "Play the game", es: "Jugar" },
-      note: "juegodesombra.yosoydeus.com",
+      note: "yosoydeus.dev/juegodesombra",
       head: "UI_SCREENS.PNG",
       shots: [
         { src: S + "hud.webp", cap: { en: "HUD and dock", es: "HUD y dock" } },
@@ -91,9 +91,9 @@
         es: "Un viaje sonoro completo a través de mi evolución musical. Escucha la discografía completa sincronizada con visuales reactivos."
       },
       tags: ["WEB AUDIO", "REACTIVE VISUALS", "2005 → 2025"],
-      link: "https://musica.yosoydeus.com/",
+      link: "/musica/",
       label: { en: "Listen now", es: "Escuchar ahora" },
-      note: "musica.yosoydeus.com",
+      note: "yosoydeus.dev/musica",
       head: "DISCOGRAFIA.WAV",
       shots: [
         { src: K + "musica-visuales.webp", cap: { en: "Visuals that react to the track", es: "Visuales que reaccionan al tema" } },
@@ -112,7 +112,7 @@
         es: "Toma el control de los visuales. Un patio de juegos en tiempo real donde el audio impulsa el arte generativo. Te invito a experimentar esta aplicación que funciona como un visualizador reactivo con audio en tiempo real: una experiencia audiovisual única donde la música cobra vida."
       },
       tags: ["GPU", "AUDIO-REACTIVE", "CAMERA + MIC", "OBS OUTPUT"],
-      link: "https://visualizer.yosoydeus.com/",
+      link: "/visualizer/",
       label: { en: "Launch visualizer", es: "Lanzar visualizador" },
       note: { en: "asks for camera and microphone", es: "pide cámara y micrófono" },
       head: "VISUAL_D3U5.CMD",
@@ -135,9 +135,9 @@
         es: "Ejemplos reales de sitios y tiendas que he entregado: lanzamientos de producto, portafolios de artistas y flujos de e‑commerce hechos a la medida de tu negocio."
       },
       tags: { en: ["CUSTOM WEB DESIGN", "LANDING PAGES", "ONLINE STORES", "CONVERSION‑FOCUSED"], es: ["DISEÑO WEB A MEDIDA", "LANDING PAGES", "TIENDAS EN LÍNEA", "ENFOQUE A CONVERSIÓN"] },
-      link: "https://webs.yosoydeus.com/",
+      link: "/webs/",
       label: { en: "View live web projects", es: "Ver proyectos web en vivo" },
-      note: { en: "webs.yosoydeus.com · curated showcase of recent builds", es: "webs.yosoydeus.com · selección curada de trabajos recientes" },
+      note: { en: "yosoydeus.dev/webs · curated showcase of recent builds", es: "yosoydeus.dev/webs · selección curada de trabajos recientes" },
       head: "WEB_SERVICES.WEB",
       shots: [
         { src: K + "webs-inicio.webp", cap: { en: "Webs Deus home", es: "Inicio de Webs Deus" } },

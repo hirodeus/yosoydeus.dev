@@ -1,0 +1,1290 @@
+/* premium-theme.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --bg-color: #000;
+    --primary-color: #1DB954;
+    --accent-color: #1ed760;
+    --text-color: #fff;
+    --text-secondary: #b3b3b3;
+    --glass-bg: rgba(18, 18, 18, 0.95);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --panel-width: 350px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Visualizer Container - CRITICAL FOR DISPLAY */
+#container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.5s;
+}
+
+/* Splash Screen Overlay - CRITICAL FOR DISPLAY */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: opacity 0.5s;
+}
+
+#splashCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.overlay-inner {
+    text-align: center;
+    padding: 4rem 3rem;
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid rgba(29, 185, 84, 0.3);
+    border-radius: 24px;
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 40px rgba(29, 185, 84, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin: 0;
+    position: relative;
+    text-shadow: 0 0 10px rgba(29, 185, 84, 0.8), 0 0 20px rgba(29, 185, 84, 0.4), 0 0 30px rgba(29, 185, 84, 0.2);
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+    opacity: 0.8;
+}
+
+#btnStart {
+    padding: 1rem 4rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+    background: linear-gradient(90deg, #1DB954, #1ed760);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px rgba(29, 185, 84, 0.4);
+}
+
+#btnStart:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 40px rgba(29, 185, 84, 0.8);
+}
+
+.note {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.note a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+    border-bottom: 1px solid transparent;
+}
+
+.note a:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* Now Bar (Spotify-style bottom bar) */
+.now-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: #181818;
+    border-top: 1px solid #282828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: 20;
+    box-sizing: border-box;
+}
+
+.nb-left {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    min-width: 180px;
+}
+
+.nb-cover {
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    margin-right: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    object-position: center;
+}
+
+.nb-text {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+.nb-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.nb-meta {
+    font-size: 0.75rem;
+    color: #b3b3b3;
+}
+
+.nb-btn {
+    background: transparent;
+    color: #b3b3b3;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin: 0 0.2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nb-btn svg {
+    transition: all 0.2s ease;
+}
+
+.nb-btn:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.nb-btn:hover svg {
+    filter: drop-shadow(0 0 4px currentColor);
+}
+
+.nb-btn:active {
+    transform: scale(0.95);
+}
+
+.nb-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    max-width: 722px;
+}
+
+.nb-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.nb-controls .nb-btn {
+    font-size: 1.5rem;
+}
+
+.nb-controls #btnPlayPause2 {
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.nb-controls #btnPlayPause2:hover {
+    transform: scale(1.05);
+}
+
+.nb-progress {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.nb-time {
+    font-size: 0.7rem;
+    color: #b3b3b3;
+    min-width: 40px;
+}
+
+.visual-btn {
+    padding: 0.6rem 0.25rem !important;
+    font-size: 0.65rem !important;
+}
+
+.visual-btn .emoji {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.2rem !important;
+}
+
+/* Splash Screen Overlay - CRITICAL FOR DISPLAY */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: opacity 0.5s;
+}
+
+#splashCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.overlay-inner {
+    text-align: center;
+    padding: 1rem;
+    width: 90%;
+    max-width: 520px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: relative;
+    overflow: visible;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin: 0;
+    position: relative;
+    text-shadow: 0 0 10px rgba(29, 185, 84, 0.8), 0 0 20px rgba(29, 185, 84, 0.4), 0 0 30px rgba(29, 185, 84, 0.2);
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+    opacity: 0.8;
+}
+
+#btnStart {
+    padding: 1rem 4rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+    background: linear-gradient(90deg, #1DB954, #1ed760);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px rgba(29, 185, 84, 0.4);
+}
+
+#btnStart:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 40px rgba(29, 185, 84, 0.8);
+}
+
+.note {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.note a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+    border-bottom: 1px solid transparent;
+}
+
+.note a:hover {
+    font-weight: 600;
+    color: #fff;
+}
+
+.nb-meta {
+    font-size: 0.75rem;
+    color: #b3b3b3;
+}
+
+.nb-btn {
+    background: transparent;
+    color: #b3b3b3;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin: 0 0.2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nb-btn svg {
+    transition: all 0.2s ease;
+}
+
+.nb-btn:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.nb-btn:hover svg {
+    filter: drop-shadow(0 0 4px currentColor);
+}
+
+.nb-btn:active {
+    transform: scale(0.95);
+}
+
+.nb-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    max-width: 722px;
+}
+
+.nb-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.nb-controls .nb-btn {
+    font-size: 1.5rem;
+}
+
+.nb-controls #btnPlayPause2 {
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.nb-controls #btnPlayPause2:hover {
+    transform: scale(1.05);
+}
+
+.nb-progress {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.nb-time {
+    font-size: 0.7rem;
+    color: #b3b3b3;
+    min-width: 40px;
+}
+
+.visual-btn {
+    padding: 0.6rem 0.25rem !important;
+    font-size: 0.65rem !important;
+}
+
+.visual-btn .emoji {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.2rem !important;
+}
+
+/* Splash Screen Overlay - CRITICAL FOR DISPLAY */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: opacity 0.5s;
+}
+
+#splashCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.overlay-inner {
+    text-align: center;
+    padding: 4rem 3rem;
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid rgba(29, 185, 84, 0.3);
+    border-radius: 24px;
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 40px rgba(29, 185, 84, 0.1),
+        inset 0 0 20px rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin: 0;
+    position: relative;
+    text-shadow: 0 0 10px rgba(29, 185, 84, 0.8), 0 0 20px rgba(29, 185, 84, 0.4), 0 0 30px rgba(29, 185, 84, 0.2);
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+    opacity: 0.8;
+}
+
+#btnStart {
+    padding: 1rem 4rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+    background: linear-gradient(90deg, #1DB954, #1ed760);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px rgba(29, 185, 84, 0.4);
+}
+
+#btnStart:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 40px rgba(29, 185, 84, 0.8);
+}
+
+.note {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.note a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+    border-bottom: 1px solid transparent;
+}
+
+.note a:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* Main Content Area */
+.main-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 140px;
+    /* Space for nav + player */
+    overflow-y: auto;
+    z-index: 10;
+    box-sizing: border-box;
+    /* Empty (home view): let touches/clicks pass through to the visuals */
+    pointer-events: none;
+}
+
+.main-view.has-content {
+    pointer-events: auto;
+}
+
+/* Visuals canvas should own its gestures (no browser pan/zoom stealing) */
+#container canvas {
+    touch-action: none;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    padding: 8px;
+    transition: color 0.2s;
+}
+
+.nav-btn.active {
+    color: #fff;
+}
+
+.nav-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Floating Now Playing Bar */
+.now-bar {
+    position: fixed;
+    bottom: 70px;
+    /* Above bottom nav */
+    left: 2%;
+    width: 96%;
+    height: 60px;
+    background: #282828;
+    /* Spotify dark grey */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    z-index: 90;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.nb-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    gap: 6px;
+    height: 100%;
+    box-sizing: border-box;
+    min-width: 0;   /* flex fix: sin esto el contenido (título largo) fuerza
+                       el ancho y desborda la barra en móvil */
+    width: 100%;
+}
+
+.nb-track-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.nb-cover {
+    width: 42px;
+    height: 42px;
+    border-radius: 4px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+.nb-text {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.nb-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+}
+
+.nb-meta {
+    font-size: 0.75rem;
+    color: #b3b3b3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nb-controls-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+/* Hide scrollbars for title scroller */
+.nb-title::-webkit-scrollbar { display: none; }
+.nb-title { scrollbar-width: none; }
+
+/* Marquee Animation */
+@keyframes marquee-scroll {
+    0%, 20% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
+.marquee-content {
+    display: inline-block;
+    padding-left: 0;
+    min-width: 100%;
+}
+
+/* When not scrolling (default state), behave normally */
+.nb-title, .nb-meta {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Apply scrolling if added via JS */
+.is-scrolling .marquee-content {
+    padding-right: 2rem; /* Gap for loop */
+}
+
+/* Triggered scroll only when active */
+.is-scrolling.scroll-active .marquee-content {
+    animation: marquee-scroll 6s linear 1;
+}
+
+/* Mobile Playback Bar */
+@media (max-width: 768px) {
+    .now-bar {
+        left: 0.5rem;
+        right: 0.5rem;
+        bottom: 5rem;
+        width: auto;
+        transform: none;
+        height: 76px;
+        padding: 4px 6px;
+    }
+
+    /* Hide prev/next buttons on mobile, use swipe */
+    #btnPrev2, #btnNext2 {
+        display: none !important;
+    }
+
+    /* Controls Order: Play, Like, Mixer, Share */
+    #btnPlayPause2 { order: 1; margin-right: 2px; }
+    #btnLike { order: 2; }
+    #btnMixer { order: 3; }
+    #btnShare { order: 4; }
+
+    /* Ensure controls fit (4 buttons: compact) */
+    .nb-controls-mini {
+        gap: 2px;
+        flex-shrink: 0;
+    }
+
+    .nb-btn {
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+    }
+    .nb-btn svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .nb-track-info {
+        flex: 1;
+        min-width: 0; /* Crucial for flex truncation */
+        margin-right: 6px;
+    }
+
+    .nb-cover {
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        margin-right: 6px;
+        display: block;
+    }
+
+    .nb-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        flex: 1;
+        min-width: 0; /* allow text to truncate so controls stay visible */
+    }
+
+    .nb-title {
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+        /* Width governed by flex (min-width: 0) — no hard cap so the
+           title uses all the space the controls leave free */
+    }
+
+    .nb-meta {
+        font-size: 0.78rem;
+        opacity: 0.8;
+    }
+
+    /* Ensure play count is small and doesn't break layout */
+    .nb-play-count {
+        font-size: 0.65rem !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.nb-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nb-btn-icon {
+    color: #b3b3b3;
+}
+
+.nb-btn-icon.active {
+    color: #1DB954;
+    /* Spotify Green */
+    fill: #1DB954;
+}
+
+.nb-progress-container {
+    width: 100%;
+    height: 12px; /* Increased hit area */
+    background: transparent; /* Invisible hit area */
+    position: absolute;
+    bottom: -6px; /* Center hit area on bottom edge */
+    left: 0;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center; /* Center the visual line */
+}
+
+.nb-progress-bg {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: 6px; /* Align visual line */
+    left: 0;
+    pointer-events: none;
+}
+
+.nb-progress-fill {
+    height: 2px;
+    background: #fff;
+    width: 0%;
+    border-radius: 2px;
+    transition: width 0.1s linear;
+    position: absolute;
+    bottom: 6px; /* Align visual line */
+    left: 0;
+    pointer-events: none;
+}
+
+/* Hover effect for desktop */
+.nb-progress-container:hover .nb-progress-fill,
+.nb-progress-container:hover .nb-progress-bg {
+    height: 4px;
+    bottom: 5px;
+}
+.nb-progress-container:hover .nb-progress-fill {
+    background: #1DB954;
+}
+
+.nb-time {
+    font-size: 0.65rem;
+    color: #b3b3b3;
+    pointer-events: none;
+    opacity: 0.85;
+}
+.nb-time-left {
+    position: absolute;
+    left: 6px;
+    bottom: 12px;
+}
+.nb-time-right {
+    position: absolute;
+    right: 6px;
+    bottom: 12px;
+}
+
+@media (max-width: 768px) {
+    .nb-time {
+        font-size: 0.6rem;
+    }
+}
+/* Splash Screen - Compact for small phones */
+@media (max-width: 480px) {
+    .overlay-inner {
+        padding: 1.8rem 1.2rem !important;
+        gap: 1.2rem !important;
+        border-radius: 14px !important;
+    }
+
+    .logo {
+        font-size: 2.2rem !important;
+        letter-spacing: 2.5px !important;
+    }
+
+    .subtitle {
+        font-size: 0.75rem !important;
+        letter-spacing: 2px !important;
+    }
+
+    #btnStart {
+        padding: 0.75rem 2.2rem !important;
+        font-size: 0.9rem !important;
+        min-height: 44px !important;
+    }
+}
+
+
+/* Extra Small Phones (375px and below - iPhone SE) */
+@media (max-width: 375px) {
+    .logo {
+        font-size: 1.9rem !important;
+        letter-spacing: 2px !important;
+    }
+
+    .subtitle {
+        font-size: 0.7rem !important;
+    }
+
+    #btnStart {
+        padding: 0.7rem 2rem !important;
+        font-size: 0.85rem !important;
+    }
+
+    .overlay-inner {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .nb-title {
+        max-width: none !important; /* flex truncation handles width */
+    }
+
+    .nb-meta {
+        max-width: none !important;
+    }
+
+    .visual-grid {
+        grid-template-columns: repeat(auto-fit, minmax(65px, 1fr)) !important;
+    }
+
+    .album-card {
+        max-width: 90px !important;
+    }
+}
+
+/* Tiny Phones (≤360px) */
+@media (max-width: 360px) {
+    /* Priorizar el título: compartir sigue disponible vía el enlace de cada canción */
+    #btnShare {
+        display: none !important;
+    }
+
+    .nb-btn {
+        width: 36px !important;
+        height: 36px !important;
+        padding: 6px !important;
+    }
+    .nb-cover {
+        width: 38px !important;
+        height: 38px !important;
+        object-position: center !important;
+    }
+}
+
+/* Ultra Small Phones (≤320px) */
+@media (max-width: 320px) {
+    .nb-btn {
+        width: 32px !important;
+        height: 32px !important;
+        padding: 6px !important;
+    }
+    .nb-cover {
+        width: 34px !important;
+        height: 34px !important;
+        object-position: center !important;
+    }
+}
+
+/* Landscape Orientation - Mobile Devices */
+@media (max-height: 500px) and (orientation: landscape) {
+
+    /* Optimize for landscape mobile view */
+    .overlay-inner {
+        padding: 1.2rem 1.8rem !important;
+        max-width: 600px !important;
+    }
+
+    .logo {
+        font-size: 2.2rem !important;
+    }
+
+    .subtitle {
+        font-size: 0.75rem !important;
+    }
+
+    #btnStart {
+        padding: 0.6rem 2.2rem !important;
+    }
+
+    .drawer {
+        max-height: 65vh !important;
+    }
+
+    .now-bar {
+        height: 75px !important;
+        flex-direction: row !important;
+        padding: 0 0.8rem !important;
+    }
+
+    .nb-left {
+        width: 30% !important;
+        margin-bottom: 0 !important;
+    }
+
+    .nb-center {
+        width: 50% !important;
+    }
+
+    .nb-right {
+        display: flex !important;
+        width: 20% !important;
+    }
+
+    .nb-cover {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    .nb-controls {
+        margin-bottom: 0.15rem !important;
+    }
+
+    .nb-controls .nb-btn {
+        width: 26px !important;
+        height: 26px !important;
+    }
+
+    .nb-controls #btnPlayPause2 {
+        width: 34px !important;
+        height: 34px !important;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Increase touch targets for all interactive elements */
+    .nb-btn,
+    .tab-btn,
+    .visual-btn,
+    button {
+        min-height: 44px !important;
+        min-width: 44px !important;
+    }
+
+    /* Playback bar: 4 botones deben caber junto al título en 390px —
+       40px sigue siendo un target táctil razonable */
+    .now-bar .nb-btn {
+        min-width: 40px !important;
+        min-height: 40px !important;
+    }
+
+    /* Remove hover effects on touch devices */
+    .nb-btn:hover,
+    .tab-btn:hover,
+    .visual-btn:hover {
+        transform: none !important;
+    }
+
+    /* Add active states instead */
+    .nb-btn:active {
+        transform: scale(0.95) !important;
+        opacity: 0.8;
+    }
+
+    .tab-btn:active {
+        opacity: 0.8;
+    }
+
+    .visual-btn:active {
+        transform: scale(0.98) !important;
+    }
+
+    /* Improve slider touch targets */
+    input[type=range]::-webkit-slider-thumb {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    input[type=range]::-moz-range-thumb {
+        width: 16px !important;
+        height: 16px !important;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .nav-btn {
+        padding: 12px;
+    }
+}
+#overlay .splash-cover {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 18px;
+    display: block;
+    margin: 0 auto 0.6rem auto;
+}
+
+#overlay .splash-action {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    padding: 0.9rem 2.2rem;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #000;
+    background: linear-gradient(90deg, #1DB954, #1ed760);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 1.6px;
+    box-shadow: 0 0 18px rgba(29, 185, 84, 0.35);
+}
+
+/* Visitor Count */
+#visitCount {
+    position: relative;
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+    z-index: 2002;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+}
+
+#overlay .splash-action:hover {
+    transform: scale(1.05);
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0.25rem 0 0.5rem 0;
+}
+
+.note a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+.note a:hover { text-decoration: underline; }
+#overlay .splash-card {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 1/1;
+    border-radius: 18px;
+    overflow: hidden;
+    margin: 0 auto 0.6rem auto;
+}
+
+#overlay .splash-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#overlay .splash-action {
+    position: absolute;
+    left: 50%;
+    top: auto;
+    bottom: 30%;
+    transform: translateX(-50%);
+    padding: 0.9rem 2.2rem;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #000;
+    background: linear-gradient(90deg, #1DB954, #1ed760);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 1.6px;
+    box-shadow: 0 0 18px rgba(29, 185, 84, 0.35);
+}
+
+#overlay .splash-action:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+#overlay .splash-info {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 0 0 0;
+    background: transparent;
+    border: none;
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#overlay .splash-info .subtitle {
+    margin: 0;
+    font-size: 0.85rem;
+    letter-spacing: 1.4px;
+    display: block;
+}
+
+#overlay .splash-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 0.2rem;
+}
+#overlay .splash-info a:hover { text-decoration: underline; }

@@ -1,4 +1,4 @@
-/* yosoydeus.com · índice flotante
+/* yosoydeus.dev · índice flotante
    Puntos fijos al borde derecho para saltar a cada módulo (proyectos, demos y descargas, skills, experiencia, reel).
    Se ilumina el que estás viendo. Sigue html[lang]. */
 (function () {

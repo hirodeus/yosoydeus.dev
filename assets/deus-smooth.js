@@ -1,4 +1,4 @@
-/* yosoydeus.com · scroll de rueda con muescas, suavizado y con aceleración
+/* yosoydeus.dev · scroll de rueda con muescas, suavizado y con aceleración
    Una rueda de mouse manda «clics» de 100 px y la página se mueve a saltos y se frena entre uno y otro. Aquí:
      1. cada muesca solo mueve un DESTINO; la página lo alcanza deslizándose (curva suave, independiente de los fps);
      2. se mide el RITMO de las muescas: un clic suelto avanza lo normal, pero si giras rápido el recorrido se acelera

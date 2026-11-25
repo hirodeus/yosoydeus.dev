@@ -1,4 +1,4 @@
-/* yosoydeus.com · REEL_2025.WEBM y cierre
+/* yosoydeus.dev · REEL_2025.WEBM y cierre
    Marco con póster y botón de reproducir (el video de 27 MB solo se descarga al darle clic, y entonces suena),
    el texto de agradecimiento y tres botones de contacto. Reemplaza la sección del reel de React. Sigue html[lang]. */
 (function () {

@@ -1,4 +1,4 @@
-/* Fondo de yosoydeus.com: «génesis». Una misma nube de ~350 partículas que cambia de forma con el scroll:
+/* Fondo de yosoydeus.dev: «génesis». Una misma nube de ~350 partículas que cambia de forma con el scroll:
      1. constelación (hero)        : Libra, con sus 8 estrellas y líneas.
      2. ensamble   (Selected work) : llegan piezas desde afuera y se enlazan; la molécula se estira hasta ser un ADN.
      3. hélix      (mitad del sitio): doble hélix completa con pares de bases, que sigue girando con el scroll.
